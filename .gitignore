@@ -1,0 +1,15 @@
+node_modules
+.next
+.env*.local
+.DS_Store
+
+.npm-cache/
+
+.media-tools/
+
+# Generated checks and local logs
+*.tsbuildinfo
+*.log
+coverage/
+test-results/
+playwright-report/

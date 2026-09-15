@@ -1,0 +1,159 @@
+.scene {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--jhoy-offwhite);
+  display: flex;
+  align-items: center;
+  padding: 11vh 6vw;
+  overflow: hidden;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.82fr) minmax(320px, 1.18fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--jhoy-wine);
+  opacity: 0.6;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-tagline), serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--jhoy-wine);
+  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+  line-height: 1.2;
+}
+
+.body {
+  margin: 0.3rem 0 0;
+  max-width: 38ch;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--jhoy-wine);
+  opacity: 0.82;
+}
+
+/* O coração é o protagonista visual — a coluna de texto nunca sobrepõe
+   nenhuma parte dele (colar, brincos, o brilho central). O padding aqui
+   é uma folga proposital: o coração ocupa quase todo o próprio frame de
+   vídeo (vasos, brincos e pingente chegam perto das bordas), então esse
+   respiro garante que o leve zoom de scroll nunca encoste em nenhum
+   contêiner ao redor. */
+.heartWrap {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 460px;
+  padding: 3%;
+}
+
+.heartInner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  will-change: transform;
+}
+
+/* Sem máscara: o coração (vasos, brincos, pingente) chega perto das
+   bordas do próprio vídeo, então qualquer recorte ali cortaria
+   conteúdo real. O fundo do vídeo já é quase idêntico ao off-white da
+   página, então a borda retangular praticamente não se percebe sem
+   precisar de truque nenhum. */
+.heartVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .textCol {
+    align-items: center;
+  }
+
+  .body {
+    max-width: 46ch;
+  }
+
+  .heartWrap {
+    max-width: 74vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .scene {
+    padding: 13vh 7vw;
+  }
+
+  .body {
+    max-width: 34ch;
+  }
+
+  .heartWrap {
+    max-width: 80vw;
+  }
+}
+
+/* Fallback estrutural do modo de movimento reduzido: layout já estático
+   por natureza (sem pin), só remove-se a entrada animada — ver
+   componente. */
+@media (prefers-reduced-motion: reduce) {
+  .scene {
+    min-height: auto;
+    padding: 14vh 6vw;
+  }
+}

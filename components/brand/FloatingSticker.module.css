@@ -1,0 +1,3 @@
+.sticker { position: fixed; z-index: 100; right: clamp(16px, 2.4vw, 36px); bottom: clamp(16px, 2.4vw, 30px); width: clamp(74px, 9vw, 124px); aspect-ratio: 1; pointer-events: none; filter: drop-shadow(0 5px 14px rgba(0,0,0,.2)); }
+.sticker img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 600px) { .sticker { right: 14px; bottom: 14px; width: 76px; } }

@@ -1,0 +1,73 @@
+.scene {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--jhoy-wine);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12vh 6vw;
+  text-align: center;
+}
+
+/* Degradê quente provisório — só até o asset final (anel com pedra
+   laranja) ser fornecido. Ver nota no componente. */
+.warmField {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 45%,
+    #e8792f 0%,
+    #b5502a 32%,
+    var(--jhoy-wine) 68%
+  );
+  opacity: 0.85;
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 26ch;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--jhoy-offwhite);
+  opacity: 0.75;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-tagline), serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--jhoy-offwhite);
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.placeholderNote {
+  margin: 0.3rem 0 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--jhoy-offwhite);
+  opacity: 0.6;
+}

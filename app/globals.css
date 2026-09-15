@@ -1,0 +1,30 @@
+:root {
+  --jhoy-wine: #571e23;
+  --jhoy-offwhite: #e3d1c3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--jhoy-offwhite);
+  color: var(--jhoy-wine);
+  overflow-x: hidden;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

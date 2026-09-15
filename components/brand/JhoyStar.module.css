@@ -1,0 +1,6 @@
+.star {
+  position: relative;
+  width: clamp(24px, 3.4vw, 44px);
+  height: clamp(24px, 3.4vw, 44px);
+  will-change: transform, opacity, filter;
+}

@@ -1,0 +1,17 @@
+.scene { height: 100svh; overflow: hidden; background: #571E23; }
+.track { height: 100%; display: flex; align-items: center; gap: clamp(12px, 1.5vw, 28px); width: max-content; padding: 0 4vw; }
+.panel { flex: 0 0 auto; margin: 0; background: linear-gradient(135deg, #40161b, #571E23); }
+.panel img { transition: opacity .4s ease; }
+.panel img[data-loaded="true"] { animation: panelReady .4s ease both; }
+@keyframes panelReady { from { opacity: .35; } to { opacity: 1; } }
+.panel img { display: block; width: calc(90svh * var(--panel-ratio)); height: 90svh; max-width: none; object-fit: contain; }
+@media (max-width: 760px) {
+  .track { gap: 4vw; padding: 0 8vw; }
+  .panel img { width: min(84vw, calc(90svh * var(--panel-ratio))); height: auto; max-width: 84vw; max-height: 90svh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel img[data-loaded="true"] { transition: none; animation: none; }
+  .scene { height: auto; overflow: visible; }
+  .track { width: 100%; height: auto; flex-direction: column; padding: 6vh 6vw; gap: 4vh; }
+  .panel img { width: auto; height: auto; max-width: 88vw; max-height: 90svh; }
+}
