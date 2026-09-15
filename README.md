@@ -6,6 +6,11 @@ Além de atender uma necessidade real da empresa, o projeto também foi criado c
 
 A proposta não foi construir um ecommerce tradicional, mas transformar a apresentação da marca em uma experiência visual mais próxima de um projeto editorial e interativo.
 
+## Projeto online
+
+**Experiência publicada:**  
+https://jhoypratas.gdpratascontrol.online
+
 ## Sobre o projeto
 
 A Jhoy Pratas é uma marca de joias com propósito, cuja comunicação busca ir além da apresentação dos produtos.
