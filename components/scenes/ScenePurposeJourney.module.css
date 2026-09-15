@@ -1,3 +1,7 @@
 .journey { position: relative; }
 .stage { position: relative; height: 100svh; overflow: hidden; isolation: isolate; }
+/* Fill the expanded mobile viewport even when ScrollTrigger fixes an inline height. */
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+ .stage { min-height: 100dvh; }
+}
 @media (prefers-reduced-motion: reduce) { .stage { height: auto; overflow: visible; } }

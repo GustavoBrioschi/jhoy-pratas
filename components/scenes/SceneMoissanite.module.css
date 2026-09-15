@@ -16,6 +16,10 @@
  .eyebrow { margin-bottom: 18px; font-size: 10px; }
  .support { margin-top: 20px; font-size: 19px; }
 }
+/* min-height also takes precedence over the dimensions frozen by pinning. */
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+ .stage { min-height: max(620px, 100dvh); }
+}
 @media (prefers-reduced-motion: reduce) {
  .stage { height: auto; min-height: 100svh; padding-top: 10vh; padding-bottom: 10vh; }
  .spark { display: none; }

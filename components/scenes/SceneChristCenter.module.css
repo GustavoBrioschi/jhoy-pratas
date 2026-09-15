@@ -16,6 +16,9 @@
  .copy strong { font-size: clamp(60px, 18vw, 100px); }
  .copy p { font-size: 20px; margin-bottom: 16px; }
 }
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+ .scene { min-height: 100dvh; }
+}
 @media (prefers-reduced-motion: reduce) {
  .scene { position: relative; min-height: 100svh; }
  .video, .words, .finale { display: none; }

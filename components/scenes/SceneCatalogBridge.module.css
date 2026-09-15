@@ -9,6 +9,9 @@
   .track { gap: 4vw; padding: 0 8vw; }
   .panel img { width: min(84vw, calc(90svh * var(--panel-ratio))); height: auto; max-width: 84vw; max-height: 90svh; }
 }
+@media (hover: none) and (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+ .scene { min-height: 100dvh; }
+}
 @media (prefers-reduced-motion: reduce) {
   .panel img[data-loaded="true"] { transition: none; animation: none; }
   .scene { height: auto; overflow: visible; }
